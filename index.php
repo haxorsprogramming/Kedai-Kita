@@ -4,9 +4,8 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="csrf-token" content="uUdSdGjVox8G9Sgk8NHK4Jxfg8g6MJTquA2xij1y" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit="no">
-  <title>Smart Trash</title>
+  <title>Kedai Kita</title>
   <!-- base:css -->
   <link rel="stylesheet" href="ladun/login/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="ladun/login/vendors/base/vendor.bundle.base.css">
@@ -31,7 +30,7 @@
                   <img src="ladun/login/images/logo.png" alt="logo" style='width:100px; '>
                 </div>
                 <div style='text-align:center;'>
-                <h3><strong>Smart Trash Monitoring </strong></h3>
+                <h3><strong>Kedai Kita</strong></h3>
                 <h6 class="font-weight-light">Harap masuk untuk melanjutkan.</h6>
                 <div>
                 <div class="pt-3">
@@ -49,7 +48,7 @@
                   </div>
                   <div class="mt-2">
                   <div style='padding-top:12px;'>
-                      <h5 class="font-weight-light">By : Indri Gusmita </h5>
+                      <h5 class="font-weight-light">2020 &copy; <a href='http://nadha.id' target='new'>NadhaMedia</a></h5>
                     </div>
                 </div>
                 </div>
