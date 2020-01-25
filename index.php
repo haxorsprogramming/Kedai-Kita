@@ -15,7 +15,8 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="ladun/login/css/style.css">
   <!-- endinject -->
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  
 </head>
 
 <body>
