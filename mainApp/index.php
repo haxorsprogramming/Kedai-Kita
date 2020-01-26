@@ -14,7 +14,7 @@ $user = $_SESSION['username'];
  <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <title>Smart Trash - Dashboard</title>
+   <title>Kedai Kita - Aplikasi Manajemen Usaha Kecil & Menengah</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/bootstrap/css/bootstrap.min.css">
@@ -36,7 +36,7 @@ $user = $_SESSION['username'];
  <body>
    <div id="app">
      <div class="main-wrapper">
-       <div class="navbar-bg"></div>
+       <div class="navbar-bg"  style='background-color:#00b894;'></div>
        <nav class="navbar navbar-expand-lg main-navbar">
          <form class="form-inline mr-auto">
            <ul class="navbar-nav mr-3">
@@ -54,7 +54,7 @@ $user = $_SESSION['username'];
                         <div class="d-sm-none d-lg-inline-block">Hi, <?=$user; ?></div></a>
              <div class="dropdown-menu dropdown-menu-right">
 
-               <a href="logOut.php" class="dropdown-item has-icon text-danger">
+               <a href="log_out.php" class="dropdown-item has-icon text-danger">
                  <i class="fas fa-sign-out-alt"></i> Logout
                </a>
              </div>
@@ -107,6 +107,6 @@ $user = $_SESSION['username'];
      
    <!-- Template JS File -->
    <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
-   <script src="../ladun/main/dashboard.js"></script>
+   <script src="../ladun/mainApp/js/mainApp.js"></script>
  </body>
  </html>
