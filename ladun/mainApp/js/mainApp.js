@@ -3,11 +3,13 @@ $(document).ready(function(){
     load_page('dashboard/beranda');
 
     $('.btnDashboard').click(function(){
-        load_page('dashboard/beranda');    
+        load_page('dashboard/beranda');   
+        gantiJudulForm("Dashboard"); 
     });
 
     $('.btnProduk').click(function(){
         load_page('produk/tampilProduk');
+        gantiJudulForm("Produk");
     });
 
     $('.btnLogOut').click(function(){
@@ -20,6 +22,10 @@ $(document).ready(function(){
             onClosed: function () {window.location.assign('log_out.php');} 
           });
     });
+
+    function gantiJudulForm(isi){
+        $('#capUtama').html(isi);
+    }
 
     function load_page(page){
         $('#divUtama').html("Memuat ...");

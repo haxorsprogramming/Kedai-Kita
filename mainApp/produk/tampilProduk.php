@@ -16,12 +16,12 @@ $kProduk = $link -> query("SELECT * FROM tbl_produk;");
 
 <div class="container">
 <div class='row mb-3'>
-<a href='#!' class='btn btn-success'>Tambah Produk</a>
+<a href='#!' class='btn btn-sm' id='btnTambah' style='background-color:#00b894;color:#dfe6e9;'>Tambah Produk</a>
 </div>
 <table class='table' id='tblProduk'>
 <thead>
 <tr>
-<td>No</td><td>Produk</td><td>Deks</td><td>Harga Jual - Beli</td><td>Stock</td><td>Aksi</td>
+<td>No</td><td>Produk</td><td>Deks</td><td>Harga Beli - Jual</td><td>Stock</td><td>Terakhir beli</td>
 </tr>
 </thead>
 <tbody>
@@ -34,11 +34,16 @@ while($fProd = $kProduk -> fetch_object()){
     $kategori = $fProd -> kategori;
     $satuan = $fProd -> satuan;
     $hargaBeli = $fProd -> harga_beli;
+    $hargaJual = $fProd -> harga_jual;
+    $stock = $fProd -> stok;
 ?>
 <tr>
 <td><?=$no; ?></td>
 <td><b><?=$kd; ?></b><br/><?=$nama;?></td>
-<td><?=$deks; ?></td><td>Harga Jual - Beli</td><td>Stock</td><td>Aksi</td>
+<td><?=$deks; ?></td>
+<td>Rp. <?=number_format($hargaBeli); ?> - Rp. <?=number_format($hargaJual); ?></td>
+<td><?=$stock; ?></td>
+<td></td>
 </tr>
 <?php
 $no++;
@@ -51,5 +56,11 @@ $no++;
 <script>
 $(document).ready(function(){
     $('#tblProduk').DataTable();
+
+    $('#btnTambah').click(function(){
+        $('#divUtama').html("Memuat ...");
+        $('#divUtama').load('produk/formTambahProduk.php');
+    });
+
 });
 </script>

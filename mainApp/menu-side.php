@@ -21,5 +21,4 @@
       <li><a class="nav-link" href="#!"><i class="fas fa-rss"></i> <span>Bantuan</span></a></li>
       <li><a class="nav-link btnLogOut" href="#!"><i class="fas fa-sign-out-alt"></i> <span>LogOut</span></a></li>
 
-
 </aside>
