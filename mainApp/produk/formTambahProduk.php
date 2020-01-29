@@ -53,11 +53,11 @@ Tambah produk
      <div class="form-group">
         <label>Satuan</label>
         <select id="txtSatuan" class="form-control">
-            <option value="">Pcs</option>
-            <option value="">Liter</option>
-            <option value="">Dus</option>
-            <option value="">Kg</option>
-            <option value="">Sachet</option>
+            <option value="pcs">Pcs</option>
+            <option value="liter">Liter</option>
+            <option value="dus">Dus</option>
+            <option value="kg">Kg</option>
+            <option value="sct">Sachet</option>
         </select>
      </div>
 </div>
@@ -69,11 +69,11 @@ Tambah produk
 </div>
 <div class="form-group">
         <label>Harga Beli</label>
-        <input type="text" class="form-control" id='txtHargaBeli'>
+        <input type="number" class="form-control" id='txtHargaBeli'>
 </div>
 <div class="form-group">
         <label>Harga Jual</label>
-        <input type="text" class="form-control" id='txtHargaJual'>
+        <input type="number" class="form-control" id='txtHargaJual'>
 </div>
 </div>
 </div>
@@ -85,8 +85,44 @@ $(document).ready(function(){
     $('#txtNamaProduk').focus();
 
     $('#btnSimpan').click(function(){
-
+        let kdProduk = $('#txtKodeProduk').val();
+        let namaProduk = $('#txtNamaProduk').val();
+        let kategori = $('#txtKategori').val();
+        let satuan = $('#txtSatuan').val();
+        let deks = $('#txtDeks').val();
+        let hargaBeli = $('#txtHargaBeli').val();
+        let hargaJual = $('#txtHargaJual').val();
+        let dataSend = {'kdProduk':kdProduk,'namaProduk':namaProduk,'kategori':kategori,'satuan':satuan,'deks':deks,'hargaBeli':hargaBeli,'hargaJual':hargaJual}
+        $.post('produk/proTambahProduk.php',dataSend,function(data){
+            let obj = JSON.parse(data);
+            if(obj.status == 'error'){
+                aksi_gagal();
+            }else{
+                aksi_sukses();
+            }
+        });
     });
+
+    function aksi_sukses(){
+        iziToast.show({
+            title: 'Sukses',
+            message: 'Produk baru berhasil ditambahkan',
+            position: 'topCenter',
+            timeout: 1000,
+            pauseOnHover : false,
+            onClosed: function () {$('#divUtama').load('produk/tampilProduk.php');} 
+          });
+    }
+    function aksi_gagal(){
+        iziToast.show({
+            title: 'Error!!',
+            message: 'Terdapat kesahalah input data',
+            position: 'topCenter',
+            timeout: 1000,
+            pauseOnHover : false,
+            onClosed: function () {$('#divUtama').load('produk/formTambahProduk.php');} 
+          });
+    }
 
 });
 </script>
