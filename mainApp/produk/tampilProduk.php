@@ -16,7 +16,7 @@ $kProduk = $link -> query("SELECT * FROM tbl_produk;");
 
 <div class="container">
 <div class='row mb-3'>
-<a href='#!' class='btn btn-sm' id='btnTambah' style='background-color:#00b894;color:#dfe6e9;'>Tambah Produk</a>
+<a href='#!' class='btn btn-sm btn-ijo btn-success' id='btnTambah'>Tambah Produk</a>
 </div>
 <table class='table' id='tblProduk'>
 <thead>

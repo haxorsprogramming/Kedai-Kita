@@ -50,19 +50,43 @@ Tambah produk
     ?>
         </select>
      </div>
+     <div class="form-group">
+        <label>Satuan</label>
+        <select id="txtSatuan" class="form-control">
+            <option value="">Pcs</option>
+            <option value="">Liter</option>
+            <option value="">Dus</option>
+            <option value="">Kg</option>
+            <option value="">Sachet</option>
+        </select>
+     </div>
 </div>
 
 <div class='col-12 col-md-6 col-lg-6'>
 <div class="form-group">
         <label>Deksripsi Produk</label>
-        <input type="text" class="form-control">
-     </div>
+        <input type="text" class="form-control" id='txtDeks'>
+</div>
+<div class="form-group">
+        <label>Harga Beli</label>
+        <input type="text" class="form-control" id='txtHargaBeli'>
+</div>
+<div class="form-group">
+        <label>Harga Jual</label>
+        <input type="text" class="form-control" id='txtHargaJual'>
 </div>
 </div>
+</div>
+<button class='btn btn-success btn-ijo' id='btnSimpan'>Simpan</button>
 </div>
 
 <script>
 $(document).ready(function(){
     $('#txtNamaProduk').focus();
+
+    $('#btnSimpan').click(function(){
+
+    });
+
 });
 </script>

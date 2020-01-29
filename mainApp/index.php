@@ -31,13 +31,14 @@ $user = $_SESSION['username'];
   <!-- Template CSS -->
   <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
   <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
+  <link rel='stylesheet' href='../ladun/mainApp/css/mainApp.css'>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
  </head>
 
  <body>
    <div id="app">
      <div class="main-wrapper">
-       <div class="navbar-bg"  style='background-color:#00b894;'></div>
+       <div class="navbar-bg btn-ijo"></div>
        <nav class="navbar navbar-expand-lg main-navbar">
          <form class="form-inline mr-auto">
            <ul class="navbar-nav mr-3">
